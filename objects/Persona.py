@@ -1,4 +1,5 @@
 import datetime
+import os
 class Persona():
 	nombre=""
 	apellido=""
@@ -19,3 +20,6 @@ class Persona():
 		archivo.write("Apellido %s"%(self.apellido))
 		archivo.write("Edad %s"%(self.edad))
 		archivo.close()
+	def borrar(self, nombre):
+		os.remove(nombre)
+		
